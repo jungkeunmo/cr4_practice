@@ -1,0 +1,10 @@
+extends ../layout/base.pug
+
+block content 
+    form(action="/img", method="get") 
+        button 추가하기
+    each img in imgs 
+        div 제목: #{img.name}
+        div 사이즈: #{img.size}
+        div 작성일: #{img.createdAt}
+        hr    
